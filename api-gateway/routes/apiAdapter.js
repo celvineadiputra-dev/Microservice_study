@@ -4,7 +4,7 @@ const {TIME_OUT} = process.env;
 
 module.exports = baseUrl =>{
     return axios.create({
-        baseUrl : baseUrl,
-        timeOut : TIME_OUT
+        baseURL : baseUrl,
+        timeOut: parseInt(TIME_OUT)
     });
 }
