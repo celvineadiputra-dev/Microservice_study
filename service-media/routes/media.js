@@ -21,7 +21,8 @@ router.post('/', (req,res)=>{
     }
 
     const fileName = filepath.split("\\").pop().split("/").pop();
-    const media = await Media.create({ image: `image/${fileName}` });
+    
+    const media = await Media.create({ image: `images/${fileName}` });
 
     return res.status(200).json({
       status : "success",
@@ -32,6 +33,28 @@ router.post('/', (req,res)=>{
     });
 
   });
+});
+
+
+router.get('/', async(req,res)=>{
+  //just get field id and image
+  const media = await Media.findAll({
+    attributes : ['id', 'image']
+  });
+
+  /*get all field
+  const media = await Media.findAll();*/
+
+  //add attribute Image url with host url
+  const mediaToUrl = media.map(item=>{
+    item.image = `${req.get('host')}/${item.image}`;
+    return item;
+  });
+
+  return res.status(200).json({
+    status : "Success",
+    data: mediaToUrl
+  })
 });
 
 module.exports = router;
