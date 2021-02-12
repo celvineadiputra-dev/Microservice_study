@@ -89,6 +89,20 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GetList_APISERVICE_Connected",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base3000}}media",
+							"host": [
+								"{{base3000}}media"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
