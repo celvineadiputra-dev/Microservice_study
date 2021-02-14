@@ -34,3 +34,7 @@ atau ketikkan untuk setiap service
 ```
 nodemon www/bin
 ```
+
+<hr/>
+
+create with ❤️ in palembang
