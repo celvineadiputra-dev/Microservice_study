@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes)=>{
-    const refreshToken = Sequelize.define('refreshToken',{
+    const refreshToken = sequelize.define('refreshToken',{
         id : {
             type : DataTypes.INTEGER,
             autoIncrement : true,
