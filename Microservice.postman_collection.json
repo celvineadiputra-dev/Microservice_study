@@ -177,6 +177,49 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"celvine\",\r\n    \"email\" : \"celvine1@micro.student.com\",\r\n    \"password\" : \"122111113\",\r\n    \"avatar\" : \"stringImage\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base5000}}users/1",
+							"host": [
+								"{{base5000}}users"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base5000}}users/2",
+							"host": [
+								"{{base5000}}users"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
