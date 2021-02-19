@@ -151,6 +151,32 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"celvine@micro.student.com\",\r\n    \"password\" : \"122111113\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base5000}}users/login",
+							"host": [
+								"{{base5000}}users"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
