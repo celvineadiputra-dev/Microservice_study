@@ -220,6 +220,30 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getListUser_withornot_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base5000}}users?user_ids[]=1&user_ids[]=2",
+							"host": [
+								"{{base5000}}users"
+							],
+							"query": [
+								{
+									"key": "user_ids[]",
+									"value": "1"
+								},
+								{
+									"key": "user_ids[]",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
