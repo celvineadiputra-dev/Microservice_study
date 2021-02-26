@@ -244,6 +244,49 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "createRefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh_token\" : \"ery82192\",\r\n    \"user_id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base5000}}refreshtoken",
+							"host": [
+								"{{base5000}}refreshtoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getToken",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base5000}}refreshtoken?refresh_token=ery82192",
+							"host": [
+								"{{base5000}}refreshtoken"
+							],
+							"query": [
+								{
+									"key": "refresh_token",
+									"value": "ery82192"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

@@ -1,5 +1,7 @@
 const create = require('./create');
+const getToken = require('./getToken');
 
-module.exports ={
-    create
+module.exports = {
+    create,
+    getToken
 }
