@@ -1,10 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var {APP_NAME} = process.env;
+const userHandler = require('../handler/users')
 
-
-router.get('/', function(req, res, next) {
-  res.send("users");
-});
+router.post('/register', userHandler.register);
 
 module.exports = router;
