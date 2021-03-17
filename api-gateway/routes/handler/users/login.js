@@ -24,8 +24,6 @@ module.exports = async (req, res) => {
                 refreshToken
             }
         })
-
-        return res.json(user.data);
     } catch (error) {
         const { status, data } = error.response;
         return res.status(status).json(data);
