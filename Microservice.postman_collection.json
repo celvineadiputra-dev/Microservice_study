@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "8381a335-135f-40eb-a67b-29ecf866f94a",
+		"_postman_id": "2eea4411-24ea-413c-8330-f6ed57bde91a",
 		"name": "Microservice",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -160,6 +160,15 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"debby@micro.student.com\",\r\n    \"password\": \"122111113\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{base3000}}users/login",
 									"host": [
@@ -167,6 +176,167 @@
 									],
 									"path": [
 										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\" : \"admin@micro.com\",\r\n    \"password\" : \"12345678\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base3000}}users/login",
+											"host": [
+												"{{base3000}}users"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "610"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"262-5dAnFXwwoLHXP6BZPxr1GcRXReg\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Mar 2021 13:31:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiQ2VsdmluZSIsImVtYWlsIjoiYWRtaW5AbWljcm8uY29tIiwicm9sZSI6ImFkbWluIiwiYXZhdGFyIjpudWxsLCJwcm9mZXNzaW9uIjoiV2ViIERldiJ9LCJpYXQiOjE2MTU5ODc5MTksImV4cCI6MTYxNTk4ODIxOX0.zb7BTMcSlvzs3Wo0BG3cRdmgx24JYH6Z2foZrwRrIrc\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiQ2VsdmluZSIsImVtYWlsIjoiYWRtaW5AbWljcm8uY29tIiwicm9sZSI6ImFkbWluIiwiYXZhdGFyIjpudWxsLCJwcm9mZXNzaW9uIjoiV2ViIERldiJ9LCJpYXQiOjE2MTU5ODc5MTksImV4cCI6MTYxNjQxOTkxOX0.xT0uuUuBXcGIandEUYdti1ZfdzP9NKRXzXWXg9VdTr0\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Profile User",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiQ2VsdmluZSIsImVtYWlsIjoiYWRtaW5AbWljcm8uY29tIiwicm9sZSI6ImFkbWluIiwiYXZhdGFyIjpudWxsLCJwcm9mZXNzaW9uIjoiV2ViIERldiJ9LCJpYXQiOjE2MTYwMzUyMDksImV4cCI6MTYxNjAzNTUwOX0.Onq_cIKaix9jjt15jsyX3V3VZm07lfAxKTZXtPXoGTI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Celvine\",\r\n    \"email\" : \"celvine1@micro.student.com\",\r\n    \"password\" : \"122111113\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base3000}}users",
+									"host": [
+										"{{base3000}}users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProfile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiQ2VsdmluZSIsImVtYWlsIjoiYWRtaW5AbWljcm8uY29tIiwicm9sZSI6ImFkbWluIiwiYXZhdGFyIjpudWxsLCJwcm9mZXNzaW9uIjoiV2ViIERldiJ9LCJpYXQiOjE2MTYwMzYwNjIsImV4cCI6MTYxNjAzNjM2Mn0.cMM6Po8XksynJcPfv3UgxwxGjErymYvQx0-wv69wzFY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base3000}}users",
+									"host": [
+										"{{base3000}}users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiZGViYnkiLCJlbWFpbCI6ImRlYmJ5QG1pY3JvLnN0dWRlbnQuY29tIiwicm9sZSI6InN0dWRlbnQiLCJhdmF0YXIiOm51bGwsInByb2Zlc3Npb24iOm51bGx9LCJpYXQiOjE2MTYwNjg0ODcsImV4cCI6MTYxNjA2ODc4N30.AhSTsoHnUxQ-Iznj4gzuuzd2x3yGb7z9jx3XrB1hfaE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base3000}}users/logout",
+									"host": [
+										"{{base3000}}users"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "RefreshToken",
+					"item": [
+						{
+							"name": "RefreshToken",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"refresh_token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJuYW1lIjoiQ2VsdmluZSIsImVtYWlsIjoiYWRtaW5AbWljcm8uY29tIiwicm9sZSI6ImFkbWluIiwiYXZhdGFyIjpudWxsLCJwcm9mZXNzaW9uIjoiV2ViIERldiJ9LCJpYXQiOjE2MTU5OTA2NjMsImV4cCI6MTYxNjQyMjY2M30.PjrveYn9Atl8PRcCwxaVSGpvxWlssUkRkcwHxaO5zak\",\r\n    \"email\" : \"admin@micro.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base3000}}refresh-token",
+									"host": [
+										"{{base3000}}refresh-token"
 									]
 								}
 							},
@@ -327,14 +497,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base5000}}refreshtoken?refresh_token=ery82192",
+							"raw": "{{base5000}}refreshtoken",
 							"host": [
 								"{{base5000}}refreshtoken"
 							],
 							"query": [
 								{
 									"key": "refresh_token",
-									"value": "ery82192"
+									"value": "ery82192",
+									"disabled": true
 								}
 							]
 						}
